@@ -1,0 +1,8 @@
+C:\Users\bok\source\repos\BusinessTransactions\bin\Debug\netstandard2.0\BusinessTransactions.deps.json
+C:\Users\bok\source\repos\BusinessTransactions\bin\Debug\netstandard2.0\BusinessTransactions.dll
+C:\Users\bok\source\repos\BusinessTransactions\bin\Debug\netstandard2.0\BusinessTransactions.pdb
+C:\Users\bok\source\repos\BusinessTransactions\obj\Debug\netstandard2.0\BusinessTransactions.csprojAssemblyReference.cache
+C:\Users\bok\source\repos\BusinessTransactions\obj\Debug\netstandard2.0\BusinessTransactions.AssemblyInfoInputs.cache
+C:\Users\bok\source\repos\BusinessTransactions\obj\Debug\netstandard2.0\BusinessTransactions.AssemblyInfo.cs
+C:\Users\bok\source\repos\BusinessTransactions\obj\Debug\netstandard2.0\BusinessTransactions.dll
+C:\Users\bok\source\repos\BusinessTransactions\obj\Debug\netstandard2.0\BusinessTransactions.pdb

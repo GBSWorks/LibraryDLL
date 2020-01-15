@@ -1,0 +1,8 @@
+C:\Users\bok\source\repos\clsLIcense\bin\Debug\netstandard2.0\clsLIcense.deps.json
+C:\Users\bok\source\repos\clsLIcense\bin\Debug\netstandard2.0\clsLIcense.dll
+C:\Users\bok\source\repos\clsLIcense\bin\Debug\netstandard2.0\clsLIcense.pdb
+C:\Users\bok\source\repos\clsLIcense\obj\Debug\netstandard2.0\clsLIcense.csprojAssemblyReference.cache
+C:\Users\bok\source\repos\clsLIcense\obj\Debug\netstandard2.0\clsLIcense.AssemblyInfoInputs.cache
+C:\Users\bok\source\repos\clsLIcense\obj\Debug\netstandard2.0\clsLIcense.AssemblyInfo.cs
+C:\Users\bok\source\repos\clsLIcense\obj\Debug\netstandard2.0\clsLIcense.dll
+C:\Users\bok\source\repos\clsLIcense\obj\Debug\netstandard2.0\clsLIcense.pdb
