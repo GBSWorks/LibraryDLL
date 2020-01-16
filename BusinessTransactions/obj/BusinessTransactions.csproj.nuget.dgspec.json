@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bok\\source\\repos\\BusinessTransactions\\BusinessTransactions.csproj": {}
+    "C:\\Users\\bok\\source\\repos\\LibraryDLL\\BusinessTransactions\\BusinessTransactions.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bok\\source\\repos\\BusinessTransactions\\BusinessTransactions.csproj": {
+    "C:\\Users\\bok\\source\\repos\\LibraryDLL\\BusinessTransactions\\BusinessTransactions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bok\\source\\repos\\BusinessTransactions\\BusinessTransactions.csproj",
+        "projectUniqueName": "C:\\Users\\bok\\source\\repos\\LibraryDLL\\BusinessTransactions\\BusinessTransactions.csproj",
         "projectName": "BusinessTransactions",
-        "projectPath": "C:\\Users\\bok\\source\\repos\\BusinessTransactions\\BusinessTransactions.csproj",
+        "projectPath": "C:\\Users\\bok\\source\\repos\\LibraryDLL\\BusinessTransactions\\BusinessTransactions.csproj",
         "packagesPath": "C:\\Users\\bok\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bok\\source\\repos\\BusinessTransactions\\obj\\",
+        "outputPath": "C:\\Users\\bok\\source\\repos\\LibraryDLL\\BusinessTransactions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

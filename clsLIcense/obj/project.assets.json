@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bok\\source\\repos\\clsLIcense\\clsLIcense.csproj",
+      "projectUniqueName": "C:\\Users\\bok\\source\\repos\\LibraryDLL\\clsLIcense\\clsLIcense.csproj",
       "projectName": "clsLIcense",
-      "projectPath": "C:\\Users\\bok\\source\\repos\\clsLIcense\\clsLIcense.csproj",
+      "projectPath": "C:\\Users\\bok\\source\\repos\\LibraryDLL\\clsLIcense\\clsLIcense.csproj",
       "packagesPath": "C:\\Users\\bok\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bok\\source\\repos\\clsLIcense\\obj\\",
+      "outputPath": "C:\\Users\\bok\\source\\repos\\LibraryDLL\\clsLIcense\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
