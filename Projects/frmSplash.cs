@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessTransactions;
 using Projects.Class;
 using Projects.Screens;
 
@@ -16,6 +17,8 @@ namespace Projects
     public partial class frmSplash : Form
     {
         clsIni ci;
+        Process BussProc = new Process();
+
         string IniPath = Environment.CurrentDirectory + "\\Settings.ini";
         int TimerCount = 0;
         public frmSplash()
@@ -66,6 +69,39 @@ namespace Projects
                 tmrSplash.Enabled = false;
                 Login.Show();
                 this.Hide();
+            }
+            else if (TimerCount == 10)
+            {
+                lblMessage.Text = "Checking Ini File";                
+                if (!File.Exists(IniPath))
+                {
+                    lblMessage.Text = "Ini File is Missing";
+                    tmrSplash.Enabled = false;
+                    MessageBox.Show("Setting File was not found. Please ask your administrator\n" + IniPath, "Error: Please check your Ini First", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else if (TimerCount == 40)
+            {
+                lblMessage.Text = "Checking License";
+                Process proc = new Process();
+                string LicenseCode = proc.ReadMyINI("LicenseCode", "Systems");
+                if (string.IsNullOrEmpty(LicenseCode))
+                {
+                    lblMessage.Text = "License Code is Invalid";
+                    tmrSplash.Enabled = false;
+                    MessageBox.Show("License Code was not found. Please ask your administrator\n" + IniPath, "Error: Please check your Ini First", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LicenseCode lc = new LicenseCode();
+                    lc.ShowDialog();
+                }
+                else
+                {
+
+                }
+            }
+            else if (TimerCount == 90)
+            {
+                lblMessage.Text = "Program Starts...";
             }
         }
     }

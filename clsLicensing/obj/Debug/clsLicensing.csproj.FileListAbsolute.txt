@@ -1,0 +1,5 @@
+C:\Users\bok\source\repos\LibraryDLL\clsLicensing\bin\Debug\clsLicensing.dll
+C:\Users\bok\source\repos\LibraryDLL\clsLicensing\bin\Debug\clsLicensing.pdb
+C:\Users\bok\source\repos\LibraryDLL\clsLicensing\obj\Debug\clsLicensing.csprojAssemblyReference.cache
+C:\Users\bok\source\repos\LibraryDLL\clsLicensing\obj\Debug\clsLicensing.dll
+C:\Users\bok\source\repos\LibraryDLL\clsLicensing\obj\Debug\clsLicensing.pdb

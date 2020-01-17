@@ -7,8 +7,11 @@ namespace BusinessTransactions
 {
     public class Process
     {
+        
         string IniFilePath = Environment.CurrentDirectory + "\\Settings.ini";
-       
+
+        clsINI ci;
+
         public List<clsMethods> AvailableMethod()
         {
             List<clsMethods> Result = new List<clsMethods>();
@@ -64,6 +67,31 @@ namespace BusinessTransactions
             catch
             {
             }
+            return result;
+        }
+
+        public string ReadMyINI(string fields,string section)
+        {
+            ci = new clsINI(IniFilePath);
+            string result = string.Empty;
+            try
+            {
+                result = ci.IniReadValue(section, fields);
+            }
+            catch
+            {
+            }
+            return result;
+        }
+        public bool ValidateLicense(string LicenseCode)
+        {
+            bool result = false;
+            try
+            {
+                //lic.checklicensefile();
+            }
+            catch
+            { }
             return result;
         }
     }

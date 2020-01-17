@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using clsLIcense;
+using clsLicensing;
 using BusinessTransactions;
 using BusinessTransactions.Entity;
 
@@ -48,8 +48,8 @@ namespace Projects
         {
             ListMethods = new List<clsMethods>();
             ListMethods = procAvailable.AvailableMethod();
-            clsLIcense.License lic = new clsLIcense.License();
-            if (!lic.checklicensefile())
+            clsLicensing.License lic = new clsLicensing.License();
+            if (!lic.CheckLicensing())
             {
                 string filePath = Assembly.GetExecutingAssembly().Location;
                 //if No License File, a 30 days trial will apply

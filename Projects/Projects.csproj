@@ -70,6 +70,12 @@
     <Compile Include="Screens\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\LicenseCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\LicenseCode.Designer.cs">
+      <DependentUpon>LicenseCode.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +94,9 @@
     <EmbeddedResource Include="Screens\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LicenseCode.resx">
+      <DependentUpon>LicenseCode.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -97,7 +106,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Settings.ini" />
+    <Content Include="Settings.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -107,9 +118,13 @@
       <Project>{9963a850-d20d-464e-91e2-20b63469d59d}</Project>
       <Name>BusinessTransactions</Name>
     </ProjectReference>
-    <ProjectReference Include="..\clsLIcense\clsLIcense.csproj">
-      <Project>{0a31f0e0-6aa5-43cc-b6c2-573ca1ccf095}</Project>
-      <Name>clsLIcense</Name>
+    <ProjectReference Include="..\clsLicensing\clsLicensing.csproj">
+      <Project>{b5ff1bd2-dfa1-4339-a88b-ccea76a5f42e}</Project>
+      <Name>clsLicensing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaeTransactions\DatabaeTransactions.csproj">
+      <Project>{85700836-377c-4921-abb9-6f5aa383cd68}</Project>
+      <Name>DatabaeTransactions</Name>
     </ProjectReference>
     <ProjectReference Include="..\Logger\Logger.csproj">
       <Project>{5b61f755-8696-45ce-8f89-9fcc0fc21ba3}</Project>

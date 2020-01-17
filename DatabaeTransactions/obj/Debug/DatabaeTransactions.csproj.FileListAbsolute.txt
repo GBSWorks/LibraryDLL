@@ -1,0 +1,4 @@
+C:\Users\bok\source\repos\LibraryDLL\DatabaeTransactions\bin\Debug\DatabaeTransactions.dll
+C:\Users\bok\source\repos\LibraryDLL\DatabaeTransactions\bin\Debug\DatabaeTransactions.pdb
+C:\Users\bok\source\repos\LibraryDLL\DatabaeTransactions\obj\Debug\DatabaeTransactions.dll
+C:\Users\bok\source\repos\LibraryDLL\DatabaeTransactions\obj\Debug\DatabaeTransactions.pdb

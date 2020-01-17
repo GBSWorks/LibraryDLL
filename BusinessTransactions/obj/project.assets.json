@@ -25,6 +25,15 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "clsLicensing/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/clsLicensing.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/clsLicensing.dll": {}
+        }
       }
     }
   },
@@ -171,11 +180,17 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "clsLicensing/1.0.0": {
+      "type": "project",
+      "path": "../clsLicensing/clsLicensing.csproj",
+      "msbuildProject": "../clsLicensing/clsLicensing.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "clsLicensing >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -210,7 +225,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\bok\\source\\repos\\LibraryDLL\\clsLicensing\\clsLicensing.csproj": {
+              "projectPath": "C:\\Users\\bok\\source\\repos\\LibraryDLL\\clsLicensing\\clsLicensing.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
