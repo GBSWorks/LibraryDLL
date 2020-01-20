@@ -10,9 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using clsLicensing;
-using BusinessTransactions;
-using BusinessTransactions.Entity;
-
+using BusinessLogic;
 
 namespace Projects
 {

@@ -14,14 +14,16 @@ C:\Users\bok\source\repos\Projects\obj\Debug\Projects.exe
 C:\Users\bok\source\repos\Projects\obj\Debug\Projects.pdb
 C:\Users\bok\source\repos\Projects\bin\Debug\BusinessTransactions.dll
 C:\Users\bok\source\repos\Projects\bin\Debug\BusinessTransactions.pdb
-C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Resources\Background.jpg
-C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Projects.exe
 C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Settings.ini
-C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\BusinessTransactions.dll
+C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Resources\Background.jpg
+C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Projects.exe.config
+C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Projects.exe
+C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Projects.pdb
+C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\BussinessLogic.dll
 C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\clsLicensing.dll
 C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\DatabaeTransactions.dll
 C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Logger.dll
-C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\BusinessTransactions.pdb
+C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\BussinessLogic.pdb
 C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\clsLicensing.pdb
 C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\DatabaeTransactions.pdb
 C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Logger.pdb
@@ -35,5 +37,3 @@ C:\Users\bok\source\repos\LibraryDLL\Projects\obj\Debug\Projects.csproj.Generate
 C:\Users\bok\source\repos\LibraryDLL\Projects\obj\Debug\Projects.csproj.CopyComplete
 C:\Users\bok\source\repos\LibraryDLL\Projects\obj\Debug\Projects.exe
 C:\Users\bok\source\repos\LibraryDLL\Projects\obj\Debug\Projects.pdb
-C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Projects.exe.config
-C:\Users\bok\source\repos\LibraryDLL\Projects\bin\Debug\Projects.pdb

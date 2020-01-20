@@ -1,0 +1,12 @@
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\bin\Debug\CryptoNytes.exe.config
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\bin\Debug\CryptoNytes.exe
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\bin\Debug\CryptoNytes.pdb
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\bin\Debug\clsLicensing.dll
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\bin\Debug\clsLicensing.pdb
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\obj\Debug\CryptoNytes.csprojAssemblyReference.cache
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\obj\Debug\CryptoNytes.Form1.resources
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\obj\Debug\CryptoNytes.Properties.Resources.resources
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\obj\Debug\CryptoNytes.csproj.GenerateResource.cache
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\obj\Debug\CryptoNytes.csproj.CopyComplete
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\obj\Debug\CryptoNytes.exe
+C:\Users\bok\source\repos\LibraryDLL\CryptoNytes\obj\Debug\CryptoNytes.pdb

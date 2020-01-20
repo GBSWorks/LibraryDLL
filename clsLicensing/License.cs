@@ -16,7 +16,7 @@ namespace clsLicensing
         {
             return "GBSWorks@123";
         }
-        public static string Encrypt(string clearText)
+        public string encrypt(string clearText)
         {
             string EncryptionKey = EncryptionKeys();
             byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
@@ -37,7 +37,7 @@ namespace clsLicensing
             }
             return clearText;
         }
-        public static string Decrypt(string cipherText)
+        public string decrypt(string cipherText)
         {
             string EncryptionKey = EncryptionKeys();
             cipherText = cipherText.Replace(" ", "+");
@@ -59,6 +59,7 @@ namespace clsLicensing
             }
             return cipherText;
         }
+        
         public bool CheckLicensing()
         {
             bool result = false;
@@ -89,23 +90,95 @@ namespace clsLicensing
                         break;
                     }
                 }
-                result = Encrypt(cpuInfo);
+                result = cpuInfo;
             }
             catch
             {
             }
             return result;
         }
-        public bool checklicense(string LicenseCode)
+
+        private bool CheckDateFormat(string datevalue)
         {
             bool result = false;
             try
             {
+                DateTime dateValue = DateTime.Parse(datevalue);
+                result = true;
             }
-
             catch
             {
+            }
+            return result;
+        }
 
+        public string GetLicenseCode(string MachineCode, DateTime dateTime)
+        {
+            string result = string.Empty;
+            try
+            {
+                string CodeToEncrypt = MachineCode + "_" + dateTime.ToString("MMDDyyyy");
+                result = encrypt(CodeToEncrypt);
+            }
+            catch
+            {
+            }
+            return result;
+        }        
+        public bool checklicense(string LicenseCode,ref string ErrMsg,bool GetDate,ref DateTime DtEndLicense,ref string MachineCode)
+        {
+            bool result = false;
+            try
+            {
+                string LicenseValue = decrypt(LicenseCode);
+                
+                if (!LicenseValue.Contains("_"))                
+                {
+                    ErrMsg = "Invalid License Code. Please check first";
+                    return result;
+                }
+                else
+                {
+                    if (LicenseValue.Split('_').Count() > 2)
+                    {
+                        ErrMsg = "Invalid License Code. Please check first";
+                        return result;
+                    }
+                    string DateValue = LicenseValue.Split('_')[1];
+                    MachineCode = LicenseValue.Split('_')[0];
+
+                    DtEndLicense = DateTime.Parse(DateValue);
+
+                    if (MachineCode != GetMachineCode())
+                    {
+                        ErrMsg = "Machine Code doesn't Match. \nMachineCode:" + GetMachineCode();
+                        return result;
+                    }
+                    else
+                    {
+                        if (!CheckDateFormat(DateValue))
+                        {
+                            ErrMsg = "Invalid Date Format. \nDate Value:" + DateValue;
+                            return result;
+                        }
+                        else
+                        {
+                            if (DateTime.Now > DateTime.Parse(DateValue).AddDays(1))
+                            {
+                                ErrMsg = "License Expired. \nDate Value:" + DateValue;
+                                return result;
+                            }else
+                            {
+                                DtEndLicense = DateTime.Parse(DateValue);
+                                result = true;
+                            }
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                ErrMsg = ex.Message;
             }
             return result;
         }

@@ -1,0 +1,8 @@
+C:\Users\bok\source\repos\LibraryDLL\BussinessLogic\bin\Debug\BussinessLogic.dll
+C:\Users\bok\source\repos\LibraryDLL\BussinessLogic\bin\Debug\BussinessLogic.pdb
+C:\Users\bok\source\repos\LibraryDLL\BussinessLogic\bin\Debug\DatabaeTransactions.dll
+C:\Users\bok\source\repos\LibraryDLL\BussinessLogic\bin\Debug\DatabaeTransactions.pdb
+C:\Users\bok\source\repos\LibraryDLL\BussinessLogic\obj\Debug\BussinessLogic.csprojAssemblyReference.cache
+C:\Users\bok\source\repos\LibraryDLL\BussinessLogic\obj\Debug\BussinessLogic.csproj.CopyComplete
+C:\Users\bok\source\repos\LibraryDLL\BussinessLogic\obj\Debug\BussinessLogic.dll
+C:\Users\bok\source\repos\LibraryDLL\BussinessLogic\obj\Debug\BussinessLogic.pdb

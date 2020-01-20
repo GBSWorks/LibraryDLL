@@ -45,7 +45,29 @@ namespace DatabaeTransactions
                 throw new Exception("Error initializing data class." + Environment.NewLine + ex.Message);
             }
         }
+        public bool CheckConnection(string ConnectionString,ref string ErrMsg)
+        {
+            bool result = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
 
+                    connection.Open();
+
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        result = true;
+                    }
+                    connection.Close();                    
+                }
+            }
+            catch(Exception ex)
+            {
+                ErrMsg = "Error:" + ex.Message;
+            }
+            return result;
+        }
         public List<string> GetDatabaseList(string ServerName)
         {
             List<string> Result = new List<string>();

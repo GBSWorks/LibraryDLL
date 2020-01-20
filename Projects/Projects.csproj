@@ -114,17 +114,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessTransactions\BusinessTransactions.csproj">
-      <Project>{9963a850-d20d-464e-91e2-20b63469d59d}</Project>
-      <Name>BusinessTransactions</Name>
+    <ProjectReference Include="..\BussinessLogic\BussinessLogic.csproj">
+      <Project>{4ce1c6d8-91c2-462a-ad6c-c05fcd8244c0}</Project>
+      <Name>BussinessLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\clsLicensing\clsLicensing.csproj">
       <Project>{b5ff1bd2-dfa1-4339-a88b-ccea76a5f42e}</Project>
       <Name>clsLicensing</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DatabaeTransactions\DatabaeTransactions.csproj">
+    <ProjectReference Include="..\DatabaeTransactions\DatabaseTransactions.csproj">
       <Project>{85700836-377c-4921-abb9-6f5aa383cd68}</Project>
-      <Name>DatabaeTransactions</Name>
+      <Name>DatabaseTransactions</Name>
     </ProjectReference>
     <ProjectReference Include="..\Logger\Logger.csproj">
       <Project>{5b61f755-8696-45ce-8f89-9fcc0fc21ba3}</Project>

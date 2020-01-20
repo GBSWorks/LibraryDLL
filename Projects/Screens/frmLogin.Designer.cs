@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tssDBStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssDateTime = new System.Windows.Forms.ToolStripStatusLabel();
@@ -45,18 +46,19 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.cmbDatabaseName = new System.Windows.Forms.ComboBox();
+            this.cmbServerName = new System.Windows.Forms.ComboBox();
             this.gbUserAccount = new System.Windows.Forms.GroupBox();
             this.tbDBPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbDBUsername = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbWinAuth = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbServerName = new System.Windows.Forms.ComboBox();
-            this.cmbDatabaseName = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -95,6 +97,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "&Login";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -124,10 +127,11 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
+            this.tssDBStatus,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel4,
             this.tssDateTime});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 296);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 133);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(528, 22);
             this.statusStrip1.TabIndex = 1;
@@ -139,10 +143,16 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(48, 17);
             this.toolStripStatusLabel1.Text = "Ready...";
             // 
+            // tssDBStatus
+            // 
+            this.tssDBStatus.Name = "tssDBStatus";
+            this.tssDBStatus.Size = new System.Drawing.Size(178, 17);
+            this.tssDBStatus.Text = "STATUS: Database Disconnected";
+            // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(354, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(176, 17);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.Text = "Press F12 to DB Settings";
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -200,7 +210,7 @@
             this.groupBox2.Controls.Add(this.cmbDatabaseName);
             this.groupBox2.Controls.Add(this.cmbServerName);
             this.groupBox2.Controls.Add(this.gbUserAccount);
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.cbWinAuth);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(12, 153);
@@ -210,8 +220,47 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Database Settings";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(177, 96);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "&Refresh";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(99, 96);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "&Connect";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // cmbDatabaseName
+            // 
+            this.cmbDatabaseName.FormattingEnabled = true;
+            this.cmbDatabaseName.Location = new System.Drawing.Point(99, 50);
+            this.cmbDatabaseName.Name = "cmbDatabaseName";
+            this.cmbDatabaseName.Size = new System.Drawing.Size(153, 21);
+            this.cmbDatabaseName.TabIndex = 9;
+            // 
+            // cmbServerName
+            // 
+            this.cmbServerName.FormattingEnabled = true;
+            this.cmbServerName.Location = new System.Drawing.Point(99, 24);
+            this.cmbServerName.Name = "cmbServerName";
+            this.cmbServerName.Size = new System.Drawing.Size(153, 21);
+            this.cmbServerName.TabIndex = 8;
+            this.cmbServerName.SelectedValueChanged += new System.EventHandler(this.cmbServerName_SelectedValueChanged);
+            this.cmbServerName.Validating += new System.ComponentModel.CancelEventHandler(this.cmbServerName_Validating);
+            // 
             // gbUserAccount
             // 
+            this.gbUserAccount.Controls.Add(this.checkBox1);
             this.gbUserAccount.Controls.Add(this.tbDBPassword);
             this.gbUserAccount.Controls.Add(this.label5);
             this.gbUserAccount.Controls.Add(this.label6);
@@ -227,6 +276,7 @@
             // 
             this.tbDBPassword.Location = new System.Drawing.Point(84, 56);
             this.tbDBPassword.Name = "tbDBPassword";
+            this.tbDBPassword.PasswordChar = '*';
             this.tbDBPassword.ReadOnly = true;
             this.tbDBPassword.Size = new System.Drawing.Size(107, 20);
             this.tbDBPassword.TabIndex = 13;
@@ -257,18 +307,18 @@
             this.tbDBUsername.Size = new System.Drawing.Size(109, 20);
             this.tbDBUsername.TabIndex = 11;
             // 
-            // checkBox1
+            // cbWinAuth
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(99, 77);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(141, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Windows Authentication";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.cbWinAuth.AutoSize = true;
+            this.cbWinAuth.Checked = true;
+            this.cbWinAuth.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbWinAuth.Location = new System.Drawing.Point(99, 77);
+            this.cbWinAuth.Name = "cbWinAuth";
+            this.cbWinAuth.Size = new System.Drawing.Size(141, 17);
+            this.cbWinAuth.TabIndex = 6;
+            this.cbWinAuth.Text = "Windows Authentication";
+            this.cbWinAuth.UseVisualStyleBackColor = true;
+            this.cbWinAuth.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label4
             // 
@@ -288,48 +338,22 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "&Server Name:";
             // 
-            // cmbServerName
+            // checkBox1
             // 
-            this.cmbServerName.FormattingEnabled = true;
-            this.cmbServerName.Location = new System.Drawing.Point(99, 24);
-            this.cmbServerName.Name = "cmbServerName";
-            this.cmbServerName.Size = new System.Drawing.Size(153, 21);
-            this.cmbServerName.TabIndex = 8;
-            this.cmbServerName.SelectedValueChanged += new System.EventHandler(this.cmbServerName_SelectedValueChanged);
-            this.cmbServerName.Validating += new System.ComponentModel.CancelEventHandler(this.cmbServerName_Validating);
-            // 
-            // cmbDatabaseName
-            // 
-            this.cmbDatabaseName.FormattingEnabled = true;
-            this.cmbDatabaseName.Location = new System.Drawing.Point(99, 50);
-            this.cmbDatabaseName.Name = "cmbDatabaseName";
-            this.cmbDatabaseName.Size = new System.Drawing.Size(153, 21);
-            this.cmbDatabaseName.TabIndex = 9;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(99, 96);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "&Connect";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(177, 96);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "&Refresh";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(84, 82);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(102, 17);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.Text = "Show Password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 318);
+            this.ClientSize = new System.Drawing.Size(528, 155);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -377,7 +401,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbWinAuth;
         private System.Windows.Forms.GroupBox gbUserAccount;
         private System.Windows.Forms.TextBox tbDBPassword;
         private System.Windows.Forms.Label label5;
@@ -387,5 +411,7 @@
         private System.Windows.Forms.ComboBox cmbServerName;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolStripStatusLabel tssDBStatus;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
